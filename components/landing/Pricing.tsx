@@ -66,7 +66,7 @@ export default function Pricing() {
 
           <p className="text-center text-slate-500 text-sm font-semibold mt-6">
             Running 5+ classrooms?{' '}
-            <a href="mailto:joel@helmport.com" className="text-orange-500 hover:underline">
+            <a href="mailto:joel@ashwardgroup.com" className="text-orange-500 hover:underline">
               Contact us for volume pricing.
             </a>
           </p>
