@@ -81,7 +81,7 @@ export async function POST(req: NextRequest) {
         })
         .eq('id', reportId)
 
-      if (error) throw error
+      if (error) console.error('Report update failed:', error)
     } else {
       // Create new report
       const { data: newReport, error } = await supabase
@@ -102,8 +102,8 @@ export async function POST(req: NextRequest) {
         .select()
         .single()
 
-      if (error) throw error
-      savedReportId = newReport.id
+      if (error) console.error('Report insert failed:', error)
+      else savedReportId = newReport?.id
     }
 
     return NextResponse.json({ sections, reportId: savedReportId })
