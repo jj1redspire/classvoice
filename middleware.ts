@@ -31,6 +31,8 @@ export async function middleware(request: NextRequest) {
   // Allow public paths
   const isPublic =
     PUBLIC_PATHS.some((p) => pathname === p || pathname.startsWith('/parent/')) ||
+    pathname === '/terms' ||
+    pathname === '/privacy' ||
     pathname.startsWith('/api/') ||
     pathname.startsWith('/_next/') ||
     pathname.startsWith('/favicon')
